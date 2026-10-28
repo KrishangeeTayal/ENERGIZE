@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-md);
+  color: var(--ink-4);
+  font-size: var(--fs-sm);
+}

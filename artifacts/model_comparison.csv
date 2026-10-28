@@ -1,0 +1,4 @@
+Model,MAE (kWh),RMSE (kWh)
+Previous-hour baseline,0.3966,0.6027
+Random Forest,0.3402,0.492
+XGBoost,0.3371,0.4834

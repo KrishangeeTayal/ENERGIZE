@@ -1,0 +1,94 @@
+/*
+ * Shared form control styles.
+ *
+ * Imported by pages that render inputs, selects and range sliders so every
+ * control in the product looks and behaves the same.
+ */
+
+.input,
+.select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--fs-sm);
+  transition:
+    border-color var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+}
+
+.input:hover,
+.select:hover {
+  border-color: var(--ink-4);
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--emerald);
+  box-shadow: 0 0 0 3px var(--emerald-wash-strong);
+}
+
+.input::placeholder {
+  color: var(--ink-4);
+}
+
+.select {
+  appearance: none;
+  padding-right: 2.4375rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='9' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%2355655b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8125rem center;
+  cursor: pointer;
+}
+
+.range {
+  width: 100%;
+  height: 1.625rem;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-runnable-track {
+  height: 0.4375rem;
+  border-radius: var(--r-full);
+  background: var(--surface-sunken);
+}
+
+.range::-moz-range-track {
+  height: 0.4375rem;
+  border-radius: var(--r-full);
+  background: var(--surface-sunken);
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.1875rem;
+  height: 1.1875rem;
+  margin-top: -0.40625rem;
+  border-radius: var(--r-full);
+  background: var(--emerald);
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow-2);
+  transition: transform var(--dur-1) var(--ease);
+}
+
+.range::-moz-range-thumb {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  border-radius: var(--r-full);
+  background: var(--emerald);
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow-2);
+}
+
+.range:hover::-webkit-slider-thumb {
+  transform: scale(1.12);
+}
+
+.range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px var(--emerald-wash-strong);
+}

@@ -1,0 +1,21 @@
+.sparkline {
+  display: block;
+  overflow: visible;
+}
+
+.emerald {
+  color: var(--emerald);
+}
+
+.sage {
+  color: var(--ink-4);
+}
+
+.amber {
+  color: var(--amber);
+}
+
+.empty {
+  font-size: var(--fs-sm);
+  color: var(--ink-4);
+}

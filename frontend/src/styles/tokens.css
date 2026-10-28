@@ -1,0 +1,116 @@
+/*
+ * ENERGIZE — design tokens
+ *
+ * A single source of truth for colour, spacing, type, radius, depth and
+ * motion. Every component reads from these variables; no component hardcodes
+ * a colour value.
+ */
+
+:root {
+  /* ---- Brand palette ------------------------------------------------ */
+  --forest: #213f32;
+  --emerald: #21865a;
+  --cream: #f7f9f6;
+  --mint: #e5f4ea;
+  --sage: #78847b;
+  --amber: #d99a35;
+
+  /* ---- Derived ink -------------------------------------------------- */
+  --ink: #16241c;
+  --ink-2: #33473b;
+  --ink-3: #55655b;
+  --ink-4: #627167;
+
+  /*
+   * The brand emerald is a fill and stroke colour, not a text colour: at
+   * 4.29:1 on cream it falls short of AA for body text. --emerald-ink is the
+   * same hue darkened for text and icons on light surfaces (5.58:1 on
+   * cream, 5.2:1 on mint). The brand value above is never changed.
+   */
+  --emerald-ink: #1a724b;
+
+  /*
+   * --sage is kept as the brand token. It reads at 3.68:1 on cream, so it is
+   * reserved for large display type and decorative rules; small supporting
+   * text uses --ink-4.
+   */
+
+  /* ---- Surfaces ----------------------------------------------------- */
+  --surface: #ffffff;
+  --surface-2: #fbfcfa;
+  --surface-3: #f1f5f0;
+  --surface-sunken: #eef2ec;
+
+  /* ---- Lines -------------------------------------------------------- */
+  --line: #e3eae3;
+  --line-strong: #cdd9cf;
+  --line-dark: rgba(247, 249, 246, 0.14);
+
+  /* ---- Accent tints ------------------------------------------------- */
+  --emerald-wash: rgba(33, 134, 90, 0.09);
+  --emerald-wash-strong: rgba(33, 134, 90, 0.16);
+  --amber-wash: #fbf1df;
+  --amber-ink: #8a5e14;
+  --danger-wash: #fceeeb;
+  --danger-ink: #a33930;
+
+  /* ---- On-dark (sidebar) -------------------------------------------- */
+  --on-dark: #f7f9f6;
+  --on-dark-2: #b9c9bd;
+  --on-dark-3: #9aae9f;
+
+  /* ---- Spacing (4.5px base) ----------------------------------------- */
+  --s-1: 0.25rem;
+  --s-2: 0.5625rem;
+  --s-3: 0.8125rem;
+  --s-4: 1.125rem;
+  --s-5: 1.625rem;
+  --s-6: 2.1875rem;
+  --s-7: 3.3125rem;
+  --s-8: 4.375rem;
+
+  /* ---- Radii -------------------------------------------------------- */
+  --r-xs: 4px;
+  --r-sm: 9px;
+  --r-md: 13px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-full: 999px;
+
+  /* ---- Depth -------------------------------------------------------- */
+  --shadow-1: 0 1px 2px rgba(33, 63, 50, 0.05);
+  --shadow-2: 0 2px 10px rgba(33, 63, 50, 0.06), 0 1px 2px rgba(33, 63, 50, 0.04);
+  --shadow-3: 0 14px 36px rgba(33, 63, 50, 0.1), 0 2px 8px rgba(33, 63, 50, 0.05);
+
+  /* ---- Typography --------------------------------------------------- */
+  --font-display: 'Manrope', 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+
+  --fs-display: clamp(2.5rem, 1.7rem + 2.9vw, 3.875rem);
+  --fs-h1: clamp(2rem, 1.55rem + 1.6vw, 2.5rem);
+  --fs-h2: 1.625rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1.03125rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.8125rem;
+  --fs-label: 0.75rem;
+  --fs-metric: clamp(2.3125rem, 1.85rem + 2vw, 3.1875rem);
+
+  --lh-tight: 1.12;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --tracking-label: 0.14em;
+  --tracking-display: -0.03em;
+
+  /* ---- Motion ------------------------------------------------------- */
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+
+  /* ---- Layout ------------------------------------------------------- */
+  --rail-width: 16rem;
+  --topbar-height: 4rem;
+  --content-max: 96rem;
+}

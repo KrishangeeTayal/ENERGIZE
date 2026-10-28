@@ -1,0 +1,144 @@
+/*
+ * The heatmap spans the full content width so its 24 hourly cells stay large
+ * enough to read; the two supporting cards sit underneath it.
+ */
+.belowGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-5);
+  align-items: start;
+}
+
+@media (max-width: 68rem) {
+  .belowGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.peakCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  border-radius: var(--r-lg);
+  background: var(--forest);
+  color: var(--on-dark);
+  box-shadow: var(--shadow-2);
+}
+
+.peakEyebrow {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--on-dark-3);
+}
+
+.peakValue {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  color: var(--on-dark);
+}
+
+.peakHour {
+  font-family: var(--font-mono);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #6fd6a4;
+}
+
+.peakNote {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--on-dark-2);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4);
+  margin: 0;
+}
+
+.facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+}
+
+.facts dt {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.facts dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.relationship {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-5);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+
+.relationship article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.relTag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.1875rem 0.5rem;
+  border-radius: var(--r-full);
+  background: var(--emerald-wash-strong);
+  color: var(--emerald-ink);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.relForecast {
+  background: var(--amber-wash);
+  color: var(--amber-ink);
+}
+
+.relSimulated {
+  background: var(--surface-3);
+  color: var(--ink-3);
+}
+
+.relationship p {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--ink-3);
+}
+
+@media (max-width: 68rem) {
+  .relationship {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

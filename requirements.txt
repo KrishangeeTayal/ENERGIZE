@@ -1,0 +1,30 @@
+# ENERGIZE — Python dependencies
+#
+# Install with:
+#     pip install -r requirements.txt
+#
+# These are the packages the FastAPI backend (api.py) and the optional
+# Streamlit app (app.py) need. The versions below are the ones this project
+# was built and tested against.
+
+# --- API server -----------------------------------------------------------
+fastapi>=0.162.0
+uvicorn>=0.54.0
+pydantic>=2.14.1
+
+# --- Data handling --------------------------------------------------------
+pandas>=3.1.0
+numpy>=2.4.6
+
+# --- Trained model loading ------------------------------------------------
+# The saved models in artifacts/ are scikit-learn and XGBoost estimators, so
+# both packages must be installed to unpickle them.
+scikit-learn>=1.9.1
+xgboost>=3.2.0
+joblib>=1.6.0
+
+# --- Optional: the Streamlit companion app -------------------------------
+# Only needed if you want to run "streamlit run app.py". The React frontend
+# does not use these.
+streamlit>=1.66.1
+plotly>=7.1.0

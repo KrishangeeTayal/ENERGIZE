@@ -1,0 +1,281 @@
+.statBand {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-6);
+  align-items: center;
+  padding: var(--s-6);
+  border-radius: var(--r-xl);
+  background: var(--forest);
+  color: var(--on-dark);
+  box-shadow: var(--shadow-2);
+}
+
+.statLead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.statLabel {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--on-dark-3);
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.9rem + 2.4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--on-dark);
+  font-variant-numeric: tabular-nums;
+}
+
+.statUnit {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--on-dark-2);
+}
+
+.statNote {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--on-dark-2);
+  max-width: 44ch;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-5) var(--s-4);
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-dark);
+}
+
+.stat dt {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--on-dark-3);
+}
+
+.stat dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--on-dark);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.control span {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.control select {
+  width: auto;
+  min-width: 6rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  font-size: var(--fs-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--s-2) var(--s-3);
+  text-align: right;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.table thead th {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-4);
+  border-bottom-color: var(--line-strong);
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.timeCell {
+  text-align: left;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+
+.above {
+  color: var(--amber-ink);
+  font-weight: 600;
+}
+
+.below {
+  color: var(--emerald-ink);
+  font-weight: 600;
+}
+
+.scoreCell {
+  text-align: right;
+}
+
+.score {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--r-full);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreHigh {
+  background: var(--amber-wash);
+  color: var(--amber-ink);
+}
+
+.scoreElevated {
+  background: var(--surface-3);
+  color: var(--ink-3);
+}
+
+.methodText {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--ink-3);
+}
+
+.methodFacts {
+  display: flex;
+  flex-direction: column;
+  margin: var(--s-4) 0 0;
+}
+
+.methodFacts > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-2) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.methodFacts > div:last-child {
+  border-bottom: 0;
+}
+
+.methodFacts dt {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.methodFacts dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink);
+  text-align: right;
+}
+
+.caveatText {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--ink-2);
+  padding: var(--s-3);
+  border-left: 3px solid var(--amber);
+  background: var(--amber-wash);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+.caveatList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+}
+
+.caveatList li {
+  position: relative;
+  padding-left: var(--s-4);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-normal);
+  color: var(--ink-3);
+}
+
+.caveatList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: var(--r-full);
+  background: var(--ink-4);
+}
+
+@media (max-width: 68rem) {
+  .statBand {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+  }
+}
+
+@media (max-width: 40rem) {
+  .statBand {
+    padding: var(--s-4);
+  }
+
+  .statGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

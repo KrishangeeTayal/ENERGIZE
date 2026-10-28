@@ -1,0 +1,9 @@
+/*
+ * ENERGIZE — global stylesheet entry
+ *
+ * Order matters: tokens first so every later rule can read them, then the
+ * base layer. Component styles are CSS Modules and are scoped by Vite.
+ */
+
+@import './tokens.css';
+@import './base.css';

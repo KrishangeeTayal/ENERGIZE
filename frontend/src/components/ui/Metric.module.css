@@ -1,0 +1,72 @@
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-width: 0;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.label {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.value {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-metric);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.number {
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink-3);
+}
+
+.note {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+  color: var(--ink-3);
+}
+
+.dark {
+  color: var(--on-dark);
+}
+
+.dark .label {
+  color: var(--on-dark-3);
+}
+
+.dark .value {
+  color: var(--on-dark);
+}
+
+.dark .unit {
+  color: var(--on-dark-2);
+}
+
+.dark .note {
+  color: var(--on-dark-2);
+}
